@@ -1,11 +1,10 @@
 public class question1_1 {
 	static boolean isStringMadeOfUniqueCharacters(String s) {
-		int size = 128;
-		boolean []arr = new boolean[size];
+		int size = 128; // Number of unique characters in ASCII
+		boolean []arr = new boolean[size]; // Initialized to false by default
 
-		// Initialize each character to not be in our array
-		for(boolean b : arr) {
-			b = false;
+		if(s.length() > size) {
+			return false; // There must be a duplicate if the size is > than the number of unique characters
 		}
 
 		// Check each if each char appears in s more than once
